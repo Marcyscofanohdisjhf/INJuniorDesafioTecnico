@@ -17,7 +17,6 @@ function mostrarMenu(){
             console.log((i + 1) + "º " + fila[i]);
         }
     }
-
     console.log("\n1 - Novo Cliente");
     console.log("2 - Atender Cliente");
     console.log("3 - Sair");
@@ -54,5 +53,4 @@ function atenderCliente(){
     }
     mostrarMenu();
 }
-
 mostrarMenu();

@@ -35,19 +35,21 @@ const booksByCategory = [
     }
 ];
 
-function countBooksInCategory(lista) {
-    let resultado = {};
+function authors(lista) {
+    let autores = [];
 
-    for (let i = 0; i < lista.length; i++) {
-        let categoria = lista[i].category;
-        let quantidade = lista[i].books.length;
+    for (let i = 0; i < lista.length; i++){
+        let livros = lista[i].books;
 
-        resultado[categoria] = quantidade;
+        for (let j = 0; j < livros.length; j++){
+            let autor = livros[j].author;
+
+            if (!autores.includes(autor)){
+                autores.push(autor);
+            }
+        }
     }
-
-    return resultado;
+    return autores;
 }
-
-let contagem = countBooksInCategory(booksByCategory);
-console.log(contagem);
-
+let listaAutores = authors(booksByCategory);
+console.log(listaAutores);

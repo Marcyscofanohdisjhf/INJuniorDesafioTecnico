@@ -18,6 +18,5 @@ rl.question("Digite uma frase: ", function (frase){
     } else {
         console.log("A frase nao e palindromo");
     }
-
     rl.close();
 });
